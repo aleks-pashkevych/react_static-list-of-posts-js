@@ -4,7 +4,7 @@ export const CommentList = ({ comments }) => {
       {comments.map(com => {
         return (
           <div key={com.id}>
-            <div key={com.id} className="CommentInfo__title">
+            <div className="CommentInfo__title">
               <strong className="CommentInfo__name">{com.name}</strong>
               {' by '}
 
@@ -17,6 +17,6 @@ export const CommentList = ({ comments }) => {
           </div>
         );
       })}
-    </div >
+    </div>
   );
 };
