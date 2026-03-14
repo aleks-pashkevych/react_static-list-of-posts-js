@@ -1,16 +1,9 @@
-export const CommentList = ({ comments }) => (
+import { CommentInfo } from '../CommentInfo/CommentInfo';
+
+export const CommentList = ({ comments = [] }) => (
   <div className="CommentList">
     {comments.map(com => (
-      <div key={com.id} className="CommentInfo">
-        <div className="CommentInfo__title">
-          <strong className="CommentInfo__name">{com.name}</strong>
-          {' by '}
-          <a className="CommentInfo__email" href={`mailto:${com.email}`}>
-            {com.email}
-          </a>
-        </div>
-        <div className="CommentInfo__body">{com.body}</div>
-      </div>
+      <CommentInfo key={com.id} comment={com} />
     ))}
   </div>
 );
