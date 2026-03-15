@@ -1,6 +1,6 @@
 export const CommentInfo = ({ comment }) => {
   return (
-    <div key={comment.id} className="CommentInfo">
+    <div className="CommentInfo">
       <div className="CommentInfo__title">
         <strong className="CommentInfo__name">{comment.name}</strong>
         {' by '}
